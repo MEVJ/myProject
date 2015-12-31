@@ -125,12 +125,64 @@
 }
 label {
     font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
 }
-footer{
-     bottom: 0;
-     width: 100%;
-     height: 50px;
-     background-color: #34495e;
+footer {
+  padding: 50px 0 65px;
+}
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+
+  color: #404040;
+  webkit-tap-highlight-color: #0085a1;
+}
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+p a {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+a {
+  color: #404040;
+}
+a:hover,
+a:focus {
+  color: #0085a1;
+}
+a img:hover,
+a img:focus {
+  cursor: zoom-in;
+}
+
+.label-primary {
+  background-color: #3498db;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3498db;
+}
+.label-success {
+  background-color: #1abc9c;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #1abc9c;
 }
 
 @media screen and (max-width: 767px) {
@@ -156,4 +208,55 @@ footer{
     .navbar.navbar-default .nav-collapse.in.slide-down,
     .navbar.navbar-inverse .nav-collapse.in.slide-down {
         transform: translate(0px,0px);
+    }
+    @media  screen and (max-width: 480px) {
+        .pull-xs-left {
+            float: left;
+        }
+        .pull-xs-right {
+            float: right;
+        }
+        .pull-xs-center{
+          text-align: center;
+        }
+    }
+
+    @media  screen and (max-width: 768px) and (min-width: 481px) {
+        .pull-sm-left {
+            float: left;
+        }
+        .pull-sm-right {
+            float: right;
+        }
+        .pull-sm-center{
+          text-align: center;
+        }
+
+    }
+
+    @media  screen and (max-width: 992px) and (min-width: 769px) {
+        .pull-md-left {
+            float: left;
+        }
+        .pull-md-right {
+            float: right;
+        }
+        .pull-md-center{
+          text-align: center;
+        }
+    }
+
+    @media  screen and (min-width: 993px) {
+        .pull-lg-left {
+            float: left;
+        }
+        .pull-lg-right {
+            float: right;
+        }
+        .pull-lg-center{
+          text-align: center;
+        }
+    }
+    .left-spacer{
+      padding-left: 10px;
     }
