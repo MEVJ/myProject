@@ -6,11 +6,7 @@
 }
 /* small header Nav */
 hr {
-  border:none;
-    height: 2px;
-    /* Set the hr color */
-    color: #02569F; /* old IE */
-    background-color: #02569F; /* Modern Browsers */
+
 }
 body{
   background-color: #f8f8f8;
@@ -18,8 +14,8 @@ body{
 
 /* navbar */
 .navbar-default {
-    background-color: #02569F;
-    border-color: #02569F;
+    background-color: #004988;
+    border-color: #004988;
 }
 /* title */
 .navbar-default .navbar-brand {
@@ -84,4 +80,21 @@ body{
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #fff;
     }
+}
+.padding-custom{
+  padding-bottom: 15px;
+}
+.custom-align-right{
+  
+}
+img.banner {
+    width: 100%;
+    height: auto;
+}
+hr.custom-hr{
+    border:none;
+    height: 2px;
+    /* Set the hr color */
+    color: #004988; /* old IE */
+    background-color: #004988; /* Modern Browsers */
 }
