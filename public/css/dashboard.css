@@ -84,9 +84,23 @@ body{
 .padding-custom{
   padding-bottom: 15px;
 }
-.custom-align-right{
-  
+.custom-padding-left{
+  padding-left: 15px;
 }
+.custom-align-right{
+
+}
+.btn-default {
+    color: #004988;
+    background-color: #fff;
+    border-color: #004988;
+}
+.btn-default:hover ,.btn-default:active ,.btn-default:focus {
+    color: #fff;
+    background-color: #004988;
+    border-color: #004988;
+}
+
 img.banner {
     width: 100%;
     height: auto;
@@ -98,3 +112,32 @@ hr.custom-hr{
     color: #004988; /* old IE */
     background-color: #004988; /* Modern Browsers */
 }
+.outer {
+
+    display: -webkit-box;
+    -webkit-box-align: center;
+
+    display: -moz-box;
+    -moz-box-align: center;
+
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+
+    display: box;
+    box-align: center;
+        -webkit-align-items: center;
+  align-items: center;
+}
+.custom-background{
+  color: #fff;
+  background-color: #004988;
+  
+}
+.panel-body-custom{
+  padding-left:15px;
+}
+.custom-panel-padding{
+  padding-top: 15px;
+  padding-bottom:15px;
+}
+
