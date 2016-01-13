@@ -68,8 +68,32 @@
 
 
   <!-- Navbar End -->
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-12">
+
+  <h2>Account Summary</h2>
+</div>
+</div>
 <div class="row">
   <div class="col-lg-3">
+    <div class="panel panel-default custom-padding-left">
+      <div class="panel-body">
+        <div class="row">
+        <h4> Welcom back</h4>
+      <div class="col-lg-12 col-md-6 col-sm-6">
+        <div id="chart" style="auto"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12 hidden-sm hidden-xs">
+  <div class="col-lg-12 col-md-6 col-sm-6">
+    <img id="cardface" src="images/Card.jpg"></img>
+    <h5>Earn 10X Rewards when you shop for clothes, bags and shoes or at departmental stores, locally, overseas or online.</h5>
+    <button type="button" class="btn btn-default custome-align">Apply Now</button>
+  </div>
+</div>
   </div>
   <div class="col-lg-9">
     <div class="col-lg-12 hidden-xs hidden-sm padding-custom">
@@ -102,10 +126,20 @@
         </div>
     </div>
     <div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-body">
-            <h3>Investments</h3>
-            <hr class="custom-hr">
+      <div class="panel panel-default custom-panel">
+        <div id="myPanel" class="panel-body-custom">
+            <div class="row outer">
+              <div class="col-lg-3 custom-panel-padding custom-background text-center">Investments</div>
+              <div class="col-md-9 custom-panel-padding">
+                <div class="col-lg-6 col-md-4 col-sm-4"><h5>Citi Prestige Card <br>XXXX XXXX XXXX 7865</h5></div>
+                <div class="col-lg-3 col-md-4 col-sm-4"><h5>Available Limit <br>3057.00 SGD</h5></div>
+                <div class="col-lg-3 col-md-4 col-sm-4"><h5>Outstanding Balance <br>1000.00 SGD</h5></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><hr></div>
+                <div class="col-lg-6 col-md-4 col-sm-4"><h5>Citi Rewards Card <br>XXXX XXXX XXXX 7345</h5></div>
+                <div class="col-lg-3 col-md-4 col-sm-4"><h5>Available Limit <br>5657.00 SGD</h5></div>
+                <div class="col-lg-3 col-md-4 col-sm-4"><h5>Outstanding Balance <br>878.00 SGD</h5></div>
+              </div>
+            </div>
           </div>
         </div>
     </div>
@@ -119,6 +153,7 @@
     </div>
   </div>
 </div>
+</div>
 
 
 
@@ -127,7 +162,56 @@
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="http://cdn.jsdelivr.net/icheck/1.0.2/icheck.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
-
+<script>
+$(function() {
+        // Create the chart
+        Highcharts.setOptions({colors: ['#1abc9c', '#3498db',]});
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart',
+                type: 'pie',
+                margin: 0
+            },
+            title: null,
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+            },
+            credits: {
+              enabled: false
+            },
+            legend:{
+              layout: 'horizontal'
+            },
+            plotOptions: {
+                pie: {
+                  slicedOffset: 0,
+                  size:'100%',
+                  shadow: false,
+                  dataLabels: {
+                        enabled: false
+                      }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+                }
+            },
+            series: [{
+                name: 'Dashboard',
+                data: [["Cash & Investments",6],["Loan & Card",4]],
+                size: '80%',
+                innerSize: '60%',
+                showInLegend:true,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+    });
+</script>
 </body>
 
 </html>
